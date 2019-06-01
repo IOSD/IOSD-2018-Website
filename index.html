@@ -377,7 +377,7 @@
         if (Hls.isSupported()) {
             var video = document.getElementById('background');
             var hls = new Hls();
-            hls.loadSource('video/video.webm');
+            hls.loadSource('video/video.m3u8');
             hls.attachMedia(video);
             hls.on(Hls.Events.MANIFEST_PARSED, function () {
                 video.play();
