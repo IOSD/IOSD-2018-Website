@@ -44,6 +44,8 @@
 </head>
 
 <body>
+    <div style="position: relative" >
+        <div id="showthis">
     <div class="nav-container sticky-top">
         <div class="bar bar--sm visible-xs bg--white bar--absolute collapse sticky-top">
             <div class="container">
@@ -230,8 +232,10 @@
         </div>
     </div>
 
+<!--              NAVBAR/        -->
 
-    <div class="main-container">
+  <!--                 MODAL IMG/                 -->
+    <div class="main-container" >
         <section class="imagebg videobg height-100 text-center" data-overlay="4">
             <video autoplay loop muted id="background">
                 <!--<source src="video/video.m3u8" type="application/x-mpegURL">-->
@@ -245,7 +249,7 @@
                 <p class="lead">
                     India's Leading Open Source development based student run Organisation.
                 </p>
-                <a class="btn btn--primary type--uppercase" href="login.html">
+                <a class="btn btn--primary type--uppercase" href="benefits-overview.html">
 
                     <span class="btn__text">
                         Get started
@@ -341,12 +345,17 @@
             </div>
             <!--end of container-->
         </footer>
+      
 
         <!--<div class="loader"></div>-->
         <a class="back-to-top inner-link" href="#" data-scroll-class="100vh:active">
             <i class="stack-interface stack-up-open-big"></i>
         </a>
-
+    </div>
+</div>
+    <div id="hide" class="img-fluid soc" style="position: absolute;z-index: 10;opacity: 1;" >
+            <a href="http://soc.iosd.tech/"> <img src="img/soc"/> </a>
+         </div>
     </div>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/flickity.min.js"></script>
@@ -368,7 +377,7 @@
         if (Hls.isSupported()) {
             var video = document.getElementById('background');
             var hls = new Hls();
-            hls.loadSource('video/video.m3u8');
+            hls.loadSource('video/video.webm');
             hls.attachMedia(video);
             hls.on(Hls.Events.MANIFEST_PARSED, function () {
                 video.play();
@@ -377,8 +386,27 @@
             var video = document.getElementById('background');
             video.innerHTML = "<source src=\"video/video.webm\" type=\"video/webm\">\n" + "<source src=\"video/video.mp4\" type=\"video/mp4\">\n" + "<source src=\"video/video.ogv\" type=\"video/ogv\">\n";
         }
+       
 
     </script>
+    <script>
+       var hide=document.getElementById('hide')
+       var showthis=document.getElementById('showthis')
+       showthis.classList.add('lighht')
+       hide.classList.remove('hide')
+       showthis.addEventListener('click',function(){
+        hide.classList.add('hide')
+        showthis.classList.remove('lighht')
+        if (Hls.isSupported()) {
+            console.log('a')
+        } else {
+          console.log('b')
+        }
+       })
+      
+       
+    </script>
+
 </body>
 
 </html>

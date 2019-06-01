@@ -4,6 +4,25 @@
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/blob/master/LICENSE)
  */
+ @media screen and (min-width: 600px) {
+  .soc {
+    margin-top: -100vh;margin-left: 25vw
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .soc {
+    margin-top: -100vh;
+  }
+}
+
+
+ .hide{
+   display:none;
+ }
+ .lighht{
+ opacity:0.6
+ }
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
